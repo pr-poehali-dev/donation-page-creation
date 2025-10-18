@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   const handleDonate = () => {
-    window.open('https://sberbank.com/transfer?phone=+79197589631', '_blank');
+    window.open('https://qiwi.com/payment/form/99?extra%5B%27account%27%5D=79197589631', '_blank');
   };
 
   return (
