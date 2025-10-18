@@ -1,11 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Button } from "@/components/ui/button";
+import Icon from "@/components/ui/icon";
 
 const Index = () => {
+  const handleDonate = () => {
+    window.open('https://sberbank.com/transfer?phone=+79197589631', '_blank');
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#FFD700] to-[#FF8C00] p-6">
+      <div className="text-center space-y-8 animate-fade-in">
+        <h1 className="font-heading font-black text-6xl md:text-8xl text-black tracking-tight leading-none animate-scale-in">
+          ЗАДОНАТЬ<br />АВТОРУ
+        </h1>
+        
+        <div className="flex justify-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <Button
+            onClick={handleDonate}
+            size="lg"
+            className="bg-black hover:bg-black/90 text-white font-semibold text-xl px-12 py-8 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 hover:shadow-black/40"
+          >
+            <Icon name="Heart" size={28} className="mr-3" />
+            ЗАДОНАТИТЬ
+          </Button>
+        </div>
       </div>
     </div>
   );
